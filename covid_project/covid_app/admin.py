@@ -1,8 +1,9 @@
 from django.contrib import admin
 from .models import Record
-# Register your models here.
+from .models import AllCountries
 
 class RecordAdmin(admin.ModelAdmin):
     pass
 
 admin.site.register(Record, RecordAdmin)
+admin.site.register(AllCountries)
