@@ -17,9 +17,11 @@ from django.contrib import admin
 from django.urls import path
 from covid_app.views import all_countries, my_records
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/all-countries/', all_countries, name='all_countries'),
     path('api/my-records/', my_records, name='my_records'),
+    
 ]
 
