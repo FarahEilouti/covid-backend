@@ -33,3 +33,14 @@ def my_records(request):
         # Return a JSON response indicating failure
         return JsonResponse({'success': False, 'message': 'Invalid request method'})
     
+# def my_records(request):
+#     records = Record.objects.all().values()
+#     return JsonResponse({'records': list(records)})
+
+# def delete_record(request, record_id):
+#     try:
+#         record = Record.objects.get(id=record_id)
+#         record.delete()
+#         return JsonResponse({'success': True})
+#     except Record.DoesNotExist:
+#         return JsonResponse({'success': False, 'message': 'Record not found'})

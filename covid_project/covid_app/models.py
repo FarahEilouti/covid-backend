@@ -6,9 +6,5 @@ class Record(models.Model):
     date = models.DateField()
 
 class AllCountries(models.Model):
-    name = models.CharField(max_length=100)
-    population = models.PositiveIntegerField()
-
-
-    def __str__(self):
-        return self.name    
+    country_name = models.CharField(max_length=255)
+    population = models.IntegerField()    
