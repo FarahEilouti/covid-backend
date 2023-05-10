@@ -16,9 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from covid_app.views import all_countries, my_records
+from django.urls import include
 
 
 urlpatterns = [
+    path('', include('covid_app.urls')),
     path('admin/', admin.site.urls),
     path('api/all-countries/', all_countries, name='all_countries'),
     path('api/my-records/', my_records, name='my_records'),
